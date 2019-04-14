@@ -1,0 +1,20 @@
+# Compiled class file
+*.class
+ 
+# Log file
+*.log
+ 
+# BlueJ files
+*.ctxt
+ 
+# ignore Maven generated target folders
+target
+ 
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
