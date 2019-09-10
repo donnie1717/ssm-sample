@@ -17,11 +17,18 @@
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
     </listener>
+
+    <listener>
+        <display-name>mySessionListener</display-name>
+        <listener-class>com.zdq.config.MySessionListener</listener-class>
+    </listener>
     -->
+    <!---->
     <filter>
         <filter-name>springSessionRepositoryFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
+
     <filter-mapping>
         <filter-name>springSessionRepositoryFilter</filter-name>
         <url-pattern>/*</url-pattern>

@@ -46,8 +46,16 @@
         <property name="basePackage" value="com.zdq.dao"/>
     </bean>
     <context:annotation-config/>
+    <bean class="com.zdq.config.MySessionListener" name="mySessionListener"/>
     <bean class="org.springframework.session.jdbc.config.annotation.web.http.JdbcHttpSessionConfiguration">
+        <property name="maxInactiveIntervalInSeconds" value="60"/>
+        <property name="httpSessionListeners">
+            <list>
+                <ref bean="mySessionListener"/>
+            </list>
+        </property>
     </bean>
+
     <!--
     <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <constructor-arg ref="dataSource" />
