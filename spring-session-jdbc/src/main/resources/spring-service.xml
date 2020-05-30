@@ -20,23 +20,4 @@
     </bean>
     <!-- 配置基于注解的声明式事务 -->
     <tx:annotation-driven transaction-manager="transactionManager" />
-
-    <bean id="cosManager" class="com.zdq.utils.CosManager">
-        <property name="cosClient" ref="cosClient"/>
-    </bean>
-
-    <bean id="region" class="com.qcloud.cos.region.Region">
-        <constructor-arg name="region_name" value="ap-guangzhou"/>
-    </bean>
-    <bean id="cred" class="com.qcloud.cos.auth.BasicCOSCredentials">
-        <constructor-arg name="accessKey" value="xxxx"/>
-        <constructor-arg name="secretKey" value="xxxx"/>
-    </bean>
-    <bean id="clientConfig" class="com.qcloud.cos.ClientConfig">
-        <constructor-arg name="region" ref="region"/>
-    </bean>
-    <bean id="cosClient" class="com.qcloud.cos.COSClient">
-        <constructor-arg name="cred" ref="cred"/>
-        <constructor-arg name="clientConfig" ref="clientConfig"/>
-    </bean>
 </beans>

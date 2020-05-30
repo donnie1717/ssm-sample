@@ -1,8 +1,7 @@
-package com.zdq.dao;
+package com.zdq.mapper;
 
 import com.zdq.entity.UserEntity;
 import org.apache.ibatis.annotations.Param;
-
 
 public interface UserMapper {
 

@@ -1,6 +1,6 @@
 package com.zdq.service.impl;
 
-import com.zdq.dao.UserMapper;
+import com.zdq.mapper.UserMapper;
 import com.zdq.entity.UserEntity;
 import com.zdq.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

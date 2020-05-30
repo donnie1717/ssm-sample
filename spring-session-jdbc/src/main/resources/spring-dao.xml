@@ -43,7 +43,7 @@
         <!-- 注入sqlSessionFactory -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!-- 给出需要扫描Dao接口包 -->
-        <property name="basePackage" value="com.zdq.dao"/>
+        <property name="basePackage" value="com.zdq.mapper"/>
     </bean>
     <context:annotation-config/>
     <bean class="com.zdq.config.MySessionListener" name="mySessionListener"/>
@@ -55,10 +55,4 @@
             </list>
         </property>
     </bean>
-
-    <!--
-    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <constructor-arg ref="dataSource" />
-    </bean>
-    -->
 </beans>
